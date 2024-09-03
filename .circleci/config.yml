@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Run job_1
-          command: echo "This is job_1"
+          command: echo "This is job_1 aaa"
   job_2:
     docker:
       - image: cimg/base:stable
