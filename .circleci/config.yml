@@ -1,12 +1,35 @@
-version: 2.1
+​version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: cimg/base:stable
+    machine:
+      image: arm-default
+    resource_class: arm.large
     steps:
-      - checkout
-      - setup_remote_docker
+      - checkout  # リポジトリからコードをチェックアウト
+
       - run:
-          name: Run job_1
-          command: echo "This is job_1 aaa"
+          name: Run Docker Container
+          command: |
+            # 使用したいDockerイメージをプル
+            docker pull cimg/base:stable
+            
+            # ホストのディレクトリをコンテナにマウントしてDockerコンテナを実行
+            # 例: ホストの`/path/to/host/directory`をコンテナの`/path/in/container`にマウント
+            docker run --name my_container -d -v $(pwd):/home/ubuntu ubuntu:latest tail -f /dev/null
+            
+            # 実行中のコンテナ内でコマンドを実行
+            docker exec my_container ls
+            docker exec my_container uname -a
+      - run:
+          name: Check Docker Container
+          command: docker ps -a
+
+      - run: docker exec my_container uname -a
+
+      - run:
+          name: Clean Up
+          command: |
+            # Dockerコンテナを停止して削除
+            docker stop my_container
+            docker rm my_container
