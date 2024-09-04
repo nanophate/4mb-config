@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   build:
-    machine:
-      image: arm-default
+    docker:
+      - image: cimg/base:stable
     resource_class: arm.large
     steps:
       - checkout
