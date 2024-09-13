@@ -2,9 +2,9 @@
 
 jobs:
   build:
-    machine:
-      image: arm-default
-    resource_class: arm.large
+    machine: true
+   #   image: arm-default
+   # resource_class: arm.large
     steps:
       - checkout  # リポジトリからコードをチェックアウト
 
