@@ -6,7 +6,7 @@ jobs:
       - image: cimg/base:stable
     # machine: true
     #  image: arm-default
-    resource_class: arm.large
+    resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
 
