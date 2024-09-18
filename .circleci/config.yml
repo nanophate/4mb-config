@@ -2,7 +2,9 @@
 
 jobs:
   build:
-    machine: true
+    docker:
+      - image: cimg/base:stable
+    # machine: true
     #  image: arm-default
     resource_class: arm.large
     steps:
