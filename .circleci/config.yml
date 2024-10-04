@@ -2,11 +2,11 @@
 
 jobs:
   build:
-    docker:
-      - image: cimg/base:stable
-    # machine: true
+    #docker:
+    #  - image: cimg/base:stable
+    machine: true
     #  image: arm-default
-    resource_class: arm.medium
+    #resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
 
