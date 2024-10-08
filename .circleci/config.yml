@@ -7,7 +7,7 @@ jobs:
     machine: true
     #  image: arm-default
     #resource_class: arm.medium
-    patalleism: 10
+    parallelism: 10
     steps:
       - checkout  # リポジトリからコードをチェックアウト
 
