@@ -35,3 +35,12 @@ jobs:
             # Dockerコンテナを停止して削除
             docker stop my_container
             docker rm my_container
+
+workflows:
+  release:
+    jobs:
+      - build
+          # This is mandatory to trigger a pipeline when pushing a tag
+          filters:
+            tags:
+                only: /.*/
