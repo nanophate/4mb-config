@@ -37,10 +37,9 @@ jobs:
             docker rm my_container
 
 workflows:
-  release:
+  build:
     jobs:
-      - build
-          # This is mandatory to trigger a pipeline when pushing a tag
+      - build:
           filters:
             tags:
                 only: /.*/
