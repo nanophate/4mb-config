@@ -37,6 +37,7 @@ jobs:
             docker rm my_container
 
 workflows:
+  version: 2
   build:
     jobs:
       - build:
