@@ -9,32 +9,7 @@ jobs:
     resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
-
-      - run:
-          name: Run Docker Container
-          command: |
-            # 使用したいDockerイメージをプル
-            docker pull cimg/base:stable
-            
-            # ホストのディレクトリをコンテナにマウントしてDockerコンテナを実行
-            # 例: ホストの`/path/to/host/directory`をコンテナの`/path/in/container`にマウント
-            docker run --name my_container -d -v $(pwd):/home/ubuntu ubuntu:latest tail -f /dev/null
-            
-            # 実行中のコンテナ内でコマンドを実行
-            docker exec my_container ls
-            docker exec my_container uname -a
-      - run:
-          name: Check Docker Container
-          command: docker ps -a
-
-      - run: docker exec my_container uname -a
-
-      - run:
-          name: Clean Up
-          command: |
-            # Dockerコンテナを停止して削除
-            docker stop my_container
-            docker rm my_container
+      - run: echo "hello"
 
 workflows:
   version: 2
