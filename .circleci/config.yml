@@ -3,7 +3,7 @@
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current
     # machine: true
     #  image: arm-default
     resource_class: arm.medium
