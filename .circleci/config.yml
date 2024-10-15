@@ -18,4 +18,4 @@ workflows:
       - build:
           filters:
             tags:
-                only: /^deploy\\/stg$/
+                only: /^deploy\/stg$/
