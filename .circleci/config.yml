@@ -9,7 +9,7 @@ jobs:
     resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
-      - run: echo "helloaa"
+      - run: echo "ssss"
 
 workflows:
   version: 2
