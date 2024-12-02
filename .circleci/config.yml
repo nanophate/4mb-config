@@ -6,7 +6,7 @@ jobs:
       - image: cimg/base:current
     # machine: true
     #  image: arm-default
-    resource_class: arm.medium
+    #resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
       - run: echo "tessshhhhhhhsssttttt"
