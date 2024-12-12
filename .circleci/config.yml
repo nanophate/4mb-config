@@ -9,14 +9,24 @@ jobs:
     #resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
-      - run: echo "tessshhhhhhhsssttttt"
+      - restore_cache:
+          name: restore git cache
+          keys:
+            - repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
+            - repo-v1-{{ arch }}-{{ .Branch }}
+            - repo-v1-{{ arch }}
+      - checkout
+      - save_cache:
+          name: save git cache
+          key: repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      
+      - run: echo "tessshhhhhhhssskkkkttttt"
       - run: echo "aaaaaaaaaaaaaaaaa"
 
 workflows:
   version: 2
   build:
     jobs:
-      - build:
-          filters:
-            tags:
-                only: /^deploy\/stg$/
+      - build
