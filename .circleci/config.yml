@@ -8,7 +8,6 @@ jobs:
     #  image: arm-default
     #resource_class: arm.medium
     steps:
-      - checkout  # リポジトリからコードをチェックアウト
       - restore_cache:
           name: restore git cache
           keys:
