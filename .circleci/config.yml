@@ -13,6 +13,7 @@ jobs:
       - run: echo "aaaaaaaaaaaaaaaaaaaa"
 
 workflows:
+  version: 2
   build:
     jobs:
       - build-1:
