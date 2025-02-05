@@ -1,7 +1,7 @@
 ​version: 2.1
 
 jobs:
-  build:
+  build-1:
     docker:
       - image: cimg/base:current
     # machine: true
@@ -13,8 +13,7 @@ jobs:
       - run: echo "aaaaaaaaaaaaaaaaaaaa"
 
 workflows:
-  version: 2
-  build:
+  build-1:
     jobs:
       - build:
           filters:
