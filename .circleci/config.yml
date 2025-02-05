@@ -13,9 +13,9 @@ jobs:
       - run: echo "aaaaaaaaaaaaaaaaaaaa"
 
 workflows:
-  build-1:
+  build:
     jobs:
-      - build:
+      - build-1:
           filters:
             tags:
                 only: /^deploy\/stg$/
