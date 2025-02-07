@@ -9,8 +9,8 @@ jobs:
     #resource_class: arm.medium
     steps:
       - checkout  # リポジトリからコードをチェックアウト
-      - run: echo "tessshhhhhhhsssttttt"
-      - run: echo "aaaaaaaaaaaaaaaaaaaa"
+      - run: echo "tessshhhhhhhssstttttaa"
+      - run: echo "aaaaaaaaaaaaaaaaaaaaaa"
 
 workflows:
   version: 2
