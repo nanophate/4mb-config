@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout  # リポジトリからコードをチェックアウト
       - run: echo "tessshhhhhhhsssttttt"
-      - run: echo "aaaaaaaaaaaaaaaaaaaa"
+      - run: echo "aaaaaaaaaaaaaaaaaaaaaaaa"
 
 workflows:
   version: 2
