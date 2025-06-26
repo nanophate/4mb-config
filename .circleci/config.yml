@@ -11,6 +11,7 @@ jobs:
       - checkout  # リポジトリからコードをチェックアウト
       - run: echo "tessshhhhhhhsssttttt"
       - run: echo "aaaaaaaaaaaaaaaaaaaaaaaa"
+      - run: sleep 60
 
 workflows:
   version: 2
